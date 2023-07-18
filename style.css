@@ -1,0 +1,79 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif; /* Sets the font for the body */
+    background-color: #34495E; /* Sets the background color */
+    color: #fff; /* Sets the text color */
+}
+
+/* Header styling */
+header {
+    background-color: #34495E; /* Sets the background color */
+    position: fixed; /* Fixes the position of the header at the top of the page */
+    top: 0;
+    left: 0;
+    width: 100%; /* Sets the width to cover the entire page width */
+    z-index: 1000; /* Ensures the header is always on top */
+    height: 40px; /* Decrease the height of the header */
+    display: flex; /* Uses flexbox for alignment */
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for a 3D effect */
+}
+
+/* Navigation list styling */
+header nav ul {
+    list-style-type: none; /* Removes bullet points */
+    display: flex; /* Use CSS flex */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Create as many columns as needed to fit the buttons */
+    justify-items: center; /* Center items horizontally */
+    gap: 10px; /* Add some space between items */
+    align-items: center; /* Centers items vertically */
+    height: 100%; /* Sets the height to match the header */
+    width: 80%; /* Keep the same width */
+}
+
+/* Navigation link styling */
+header nav ul li a {
+    display: inline-block; /* Allows for width and height to be set */
+    text-decoration: none; /* Removes underline */
+    color: #fff; /* Sets text color */
+    background-color: #3498DB; /* Sets background color */
+    padding: 5px 10px; /* Adds space around text */
+    border-radius: 5px; /* Rounds the corners */
+    transition: transform 0.3s ease-in-out; /* Animates any changes */
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+    width: 100px; /* Sets a fixed width */
+    text-align: center; /* Centers text */
+    margin: 0 10px; /* Adds space between items */
+}
+
+/* Navigation link hover styling */
+header nav ul li a:hover {
+    transform: scale(1.02); /* Slightly enlarges item */
+}
+
+#hero {
+    background-color: #2C3E50;
+    padding: 60px 0 50px 0;
+    text-align: center;
+    min-height: 100vh; /* Updated value to cover the full viewport height */
+    position: relative;
+}
+
+/* Hero section heading styling */
+#hero h1 {
+    font-size: 2em; /* Sets the font size */
+    margin: 0; /* Removes default margin */
+}
+
+/* Hero section paragraph styling */
+#hero p {
+    font-size: 1.2em; /* Sets the font size */
+}
