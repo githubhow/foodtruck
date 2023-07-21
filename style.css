@@ -39,6 +39,11 @@ header nav ul {
     width: 80%; /* Keep the same width */
 }
 
+/* Navigation list item styling */
+header nav ul li {
+    flex: 1; /* Allows items to grow and shrink as needed */
+}
+
 /* Navigation link styling */
 header nav ul li a {
     display: inline-block; /* Allows for width and height to be set */
