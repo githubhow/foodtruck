@@ -77,3 +77,36 @@ header nav ul li a:hover {
 #hero p {
     font-size: 1.2em; /* Sets the font size */
 }
+
+/* Hamburger icon styling */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    width: 2rem; /* Match the height of the navigation buttons */
+    height: 2rem; /* Match the height of the navigation buttons */
+    background: #3498DB; /* Sets the background color of the button */
+    border-radius: 5px; /* Less rounded corners for a more rectangular look */
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s ease; /* Adds a transition effect when the button state changes */
+    position: absolute; /* Position the hamburger menu to the right */
+    right: 15px; /* Margin from the right side of the header */
+    transform: translateY(-50%); /* Shift the hamburger icon up by half its height to center it vertically */
+    color: #fff; /* Sets the SVG stroke color */
+}
+
+.hamburger:hover {
+    background: #2980B9; /* Changes the background color when hovered */
+}
+
+@media screen and (max-width: 700px) {
+    #main-menu {
+        display: none; /* Hide the navigation links */
+    }
+
+    .hamburger {
+        display: flex; /* Show the hamburger menu */
+    }
+}
