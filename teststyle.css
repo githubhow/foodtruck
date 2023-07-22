@@ -1,0 +1,108 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif; /* Sets the font for the body */
+    background-color: #2C3E50; /* Sets the background color */
+    color: #fff; /* Sets the text color */
+}
+
+/* Header styling */
+header {
+    background-color: #34495E; /* Sets the background color */
+    position: fixed; /* Fixes the position of the header at the top of the page */
+    top: 0;
+    left: 0;
+    width: 100%; /* Sets the width to cover the entire page width */
+    z-index: 1000; /* Ensures the header is always on top */
+    height: 40px; /* Decrease the height of the header */
+    display: flex; /* Uses flexbox for alignment */
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for a 3D effect */
+}
+
+/* Navigation list styling */
+header nav ul {
+    list-style-type: none; /* Removes bullet points */
+    display: flex; /* Use CSS grid instead of flex */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Create as many columns as needed to fit the buttons */
+    justify-items: center; /* Center items horizontally */
+    gap: 20px; /* Add some space between items */
+    align-items: center; /* Centers items vertically */
+    height: 100%; /* Sets the height to match the header */
+    width: 80%; /* Keep the same width */
+}
+
+/* Navigation list item styling */
+header nav ul li {
+    flex: 1; /* Allows items to grow and shrink as needed */
+}
+
+/* Navigation link styling */
+header nav ul li a {
+    display: inline-block; /* Allows for width and height to be set */
+    text-decoration: none; /* Removes underline */
+    color: #fff; /* Sets text color */
+    background-color: #3498DB; /* Sets background color */
+    padding: 5px 10px; /* Adds space around text */
+    border-radius: 5px; /* Rounds the corners */
+    transition: transform 0.3s ease-in-out; /* Animates any changes */
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+    width: 100px; /* Sets a fixed width */
+    text-align: center; /* Centers text */
+    margin: 0 10px; /* Adds space between items */
+}
+
+/* Navigation link hover styling */
+header nav ul li a:hover {
+    transform: scale(1.02); /* Slightly enlarges item */
+}
+
+/* Hero section styling */
+#hero {
+    background-color: #2C3E50; /* Sets the background color */
+    padding: 60px 0 50px 0; /* Adds space around content */
+    padding-top: 70px; /* Adds extra space at the top to account for the fixed header */
+    text-align: center; /* Centers text */
+    height: calc(100vh - 20px); /* Sets the height to fill the viewport, accounting for padding */
+    position: relative; /* Allows for absolute positioning within this element */
+}
+
+/* Hamburger icon styling */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    width: 2rem; /* Match the height of the navigation buttons */
+    height: 2rem; /* Match the height of the navigation buttons */
+    background: #3498DB; /* Sets the background color of the button */
+    border-radius: 5px; /* Less rounded corners for a more rectangular look */
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s ease; /* Adds a transition effect when the button state changes */
+    position: absolute; /* Position the hamburger menu to the right */
+    right: 15px; /* Margin from the right side of the header */
+    transform: translateY(-50%); /* Shift the hamburger icon up by half its height to center it vertically */
+    color: #fff; /* Sets the SVG stroke color */
+}
+
+.hamburger:hover {
+    background: #2980B9; /* Changes the background color when hovered */
+}
+
+@media screen and (max-width: 900px) {
+    #main-menu {
+        display: none; /* Hide the navigation links */
+    }
+
+    .hamburger {
+        display: flex; /* Show the hamburger menu */
+    }
+}
