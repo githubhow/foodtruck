@@ -1,0 +1,97 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.background-image {
+    background-image: url('truckimg1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+/* Header styling */
+header {
+    display: flex; /* Uses flexbox for alignment */
+    justify-content: space-between; /* Distributes items evenly: first item is at the start, last item at the end */
+    background-color: transparent; /* Sets the background color */
+    height: 50px;
+}
+
+/* Logo container styling */
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%; /* Sets logo container height equal to header height */
+}
+
+/* New logo link styling */
+.logo-link {
+    display: flex;
+    height: 100%;
+}
+
+/* Logo styling */
+.logo img {
+    height: 100%; /* Sets logo height equal to logo container height */
+}
+
+/* Navigation container styling */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation styling */
+nav ul {
+    display: flex; /* Aligns items in a row */
+    list-style-type: none; /* Removes bullet points */
+    padding: 0;
+}
+
+nav ul li:last-child {
+    padding-right: 30px; /* Change this value as needed */
+}
+
+nav ul li {
+    margin-right: 20px; /* Adds space between links */
+}
+
+nav ul li a {
+    color: #ffffff;
+    -webkit-text-stroke: 2px #050000; /* Apply a blue stroke */
+    font-weight: 800; /* Make the text bold to emphasize the stroke */
+    font-size: 28px; /* Increase font size, adjust as needed */
+    text-decoration: none;
+    font-family: Arial, sans-serif; /* Use a font that supports stroke effect well */
+}
+
+.content {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 5%;
+}
+
+.content a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
