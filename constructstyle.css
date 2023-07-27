@@ -33,6 +33,7 @@ header {
     display: flex;
     align-items: center;
     height: 100%; /* Sets logo container height equal to header height */
+    mix-blend-mode: multiply;
 }
 
 /* New logo link styling */
