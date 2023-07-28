@@ -12,6 +12,7 @@ body {
 }
 
 .background-image {
+    position: relative; /* Added */
     background-image: url('truckimg1.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -20,9 +21,20 @@ body {
     height: 100vh;
 }
 
+.glassmorphism {
+    display: none; /* Hide by default */
+    position: absolute; /* Added */
+    top: 0; /* Added */
+    left: 0; /* Added */
+    width: 100%; /* Added */
+    height: 100vh; /* Added */
+    z-index: 0; /* Add this */
+}
+
 /* Header styling */
 header {
     display: flex; /* Uses flexbox for alignment */
+    flex-direction: row-reverse;
     justify-content: space-between; /* Distributes items evenly: first item is at the start, last item at the end */
     background-color: transparent; /* Sets the background color */
     height: 50px;
@@ -31,8 +43,9 @@ header {
 /* Logo container styling */
 .logo {
     display: flex;
+    padding-right: 20px;
     align-items: center;
-    height: 100%; /* Sets logo container height equal to header height */
+    height: 90px; /* Sets logo container height equal to header height */
     mix-blend-mode: multiply;
 }
 
@@ -51,6 +64,8 @@ header {
 nav {
     display: flex;
     align-items: center;
+    position: relative; /* Add this */
+    z-index: 1; /* Add this */
 }
 
 /* Navigation styling */
@@ -60,8 +75,8 @@ nav ul {
     padding: 0;
 }
 
-nav ul li:last-child {
-    padding-right: 30px; /* Change this value as needed */
+nav ul li:first-child {
+    padding-left: 20px; /* Change this value as needed */
 }
 
 nav ul li {
@@ -79,7 +94,7 @@ nav ul li a {
 
 .content {
     position: absolute;
-    top: 60%;
+    top: 58.5%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -90,9 +105,59 @@ nav ul li a {
     text-decoration: none;
     display: inline-block;
     color: #fff;
+    font-weight: 800;
     font-size: 18px;
     border: 2px solid #fff;
     padding: 14px 70px;
     border-radius: 50px;
     margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .background-image {
+        background-image: url('mediatruck.jpg');
+    }
+
+    .glassmorphism {
+        display: block; /* Show the div */
+        background: rgba(255, 255, 255, 0.1); /* Changed */
+        backdrop-filter: blur(4px); /* Added */
+    }
+
+    header {
+        flex-direction: column; /* Change direction of items */
+    }
+
+    .content {
+        top: 45%;
+    }
+
+    .logo {
+        justify-content: center; /* Center logo horizontally */
+    }
+
+    .logo img {
+        height: 180px; /* Increase logo size, adjust as needed */
+    }
+
+    nav {
+        position: fixed; /* Make navigation stick to the bottom */
+        bottom: 0; /* Stick to the bottom */
+        width: 100%; /* Full width */
+        justify-content: center; /* Center items */
+    }
+
+    nav ul li a {
+        font-size: 23px; /* Decrease font size, adjust as needed */
+    }
+
+    nav ul li {
+        margin-right: 10px; /* Decrease space between links, adjust as needed */
+        padding-bottom: 20px;
+    }
+    
+    nav ul li:last-child {
+    padding-right: 0px; /* Change this value as needed */
+    }
+    
 }
