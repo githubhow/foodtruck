@@ -1,163 +1,184 @@
 /* Reset default styles */
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Removes default margins */
+    padding: 0; /* Removes default padding */
     box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
 }
 
 body {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+    overflow: hidden; /* Hides any content that's exceeding the body's size */
+    margin: 0; /* Removes default body margin */
+    padding: 0; /* Removes default body padding */
 }
 
+/* Styles for the background image */
 .background-image {
-    position: relative; /* Added */
-    background-image: url('truckimg1.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    height: 100vh;
+    position: relative; /* Sets positioning context for absolute positioned child elements */
+    background-image: url('truckimg1.png'); /* Specifies the image */
+    background-size: cover; /* Scales the image as large as possible without stretching it */
+    background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Makes background fixed while the content can move */
+    height: 100vh; /* Makes the image take up the full viewport height */
 }
 
+/* Styles for the glassmorphism effect container */
 .glassmorphism {
-    display: none; /* Hide by default */
-    position: absolute; /* Added */
-    top: 0; /* Added */
-    left: 0; /* Added */
-    width: 100%; /* Added */
-    height: 100vh; /* Added */
-    z-index: 0; /* Add this */
+    display: none; /* Hides the container by default */
+    position: absolute; /* Positions the container relative to the nearest positioned ancestor */
+    top: 0; /* Positions the container at the top of the ancestor */
+    left: 0; /* Positions the container at the left of the ancestor */
+    width: 100%; /* Makes the container full width */
+    height: 100vh; /* Makes the container take up the full viewport height */
+    z-index: 0; /* Places the container behind other elements */
 }
 
 /* Header styling */
 header {
-    display: flex; /* Uses flexbox for alignment */
-    flex-direction: row-reverse;
-    justify-content: space-between; /* Distributes items evenly: first item is at the start, last item at the end */
-    background-color: transparent; /* Sets the background color */
-    height: 50px;
+    display: flex; /* Enables flex context for child elements */
+    flex-direction: row-reverse; /* Reverses the natural order of flex items */
+    justify-content: space-between; /* Spaces flex items evenly apart */
+    background-color: transparent; /* Makes the background transparent */
+    height: 50px; /* Sets the height of the header */
 }
 
 /* Logo container styling */
 .logo {
-    display: flex;
-    padding-right: 20px;
-    align-items: center;
-    height: 90px; /* Sets logo container height equal to header height */
-    mix-blend-mode: multiply;
+    display: flex; /* Enables flex context for child elements */
+    padding-right: 40px; /* Adds some space to the right */
+    align-items: center; /* Centers flex items vertically */
+    height: 90px; /* Sets the height of the logo container */
+    mix-blend-mode: multiply; /* Specifies the blend mode for the logo */
 }
 
 /* New logo link styling */
 .logo-link {
-    display: flex;
-    height: 100%;
+    display: flex; /* Enables flex context for child elements */
+    height: 100%; /* Sets the height equal to its parent's height */
 }
 
 /* Logo styling */
 .logo img {
-    height: 100%; /* Sets logo height equal to logo container height */
+    height: 100%; /* Sets the image height equal to its parent's height */
 }
 
 /* Navigation container styling */
 nav {
-    display: flex;
-    align-items: center;
-    position: relative; /* Add this */
-    z-index: 1; /* Add this */
+    display: flex; /* Enables flex context for child elements */
+    align-items: center; /* Centers flex items vertically */
+    position: relative; /* Sets positioning context for absolute positioned child elements */
+    z-index: 1; /* Places the navigation in front of other elements */
 }
 
-/* Navigation styling */
+/* Navigation list styling */
 nav ul {
-    display: flex; /* Aligns items in a row */
+    display: flex; /* Places list items in a row */
     list-style-type: none; /* Removes bullet points */
-    padding: 0;
+    padding: 0; /* Removes default padding */
 }
 
+/* First navigation list item styling */
 nav ul li:first-child {
-    padding-left: 20px; /* Change this value as needed */
+    padding-left: 20px; /* Adds some space to the left */
 }
 
+/* Navigation list items styling */
 nav ul li {
-    margin-right: 20px; /* Adds space between links */
+    margin-right: 20px; /* Adds space between list items */
 }
 
+/* Navigation links styling */
 nav ul li a {
-    color: #ffffff;
-    -webkit-text-stroke: 2px #050000; /* Apply a blue stroke */
-    font-weight: 800; /* Make the text bold to emphasize the stroke */
-    font-size: 28px; /* Increase font size, adjust as needed */
-    text-decoration: none;
-    font-family: Arial, sans-serif; /* Use a font that supports stroke effect well */
+    color: #ffffff; /* Sets the link color */
+    -webkit-text-stroke: 2px #050000; /* Applies a stroke to the link text */
+    font-weight: 800; /* Makes the link text bold */
+    font-size: 28px; /* Sets the link text size */
+    text-decoration: none; /* Removes the underline from the link text */
+    font-family: Arial, sans-serif; /* Sets the font family for the link text */
 }
 
+/* Content styling */
 .content {
-    position: absolute;
-    top: 58.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    padding: 0 5%;
+    position: absolute; /* Positions the content relative to the nearest positioned ancestor */
+    top: 58.5%; /* Positions the content from the top */
+    left: 50%; /* Positions the content from the left */
+    transform: translate(-50%, -50%); /* Centers the content */
+    text-align: center; /* Centers the text */
+    padding: 0 5%; /* Adds padding to the left and right */
 }
 
+/* Content link styling */
 .content a {
-    text-decoration: none;
-    display: inline-block;
-    color: #fff;
-    font-weight: 800;
-    font-size: 18px;
-    border: 2px solid #fff;
-    padding: 14px 70px;
-    border-radius: 50px;
-    margin-top: 20px;
+    text-decoration: none; /* Removes the underline from the link text */
+    display: inline-block; /* Allows to add padding, margins, etc. */
+    color: #fff; /* Sets the link color */
+    font-weight: 800; /* Makes the link text bold */
+    font-size: 18px; /* Sets the link text size */
+    border: 2px solid #fff; /* Sets the border around the link */
+    padding: 14px 70px; /* Adds padding to the top/bottom and left/right */
+    border-radius: 50px; /* Makes the border corners rounded */
+    margin-top: 20px; /* Adds some space to the top */
+    background-color: rgba(0, 0, 0, 0.8); /* Sets the background color of the link */
 }
 
+/* Styles for screens with a max width of 600px */
 @media screen and (max-width: 600px) {
+    /* Background image styling */
     .background-image {
-        background-image: url('mediatruck.jpg');
+        background-image: url('mediatruck.jpg'); /* Changes the image for small screens */
     }
 
+    /* Glassmorphism effect container styling */
     .glassmorphism {
-        display: block; /* Show the div */
-        background: rgba(255, 255, 255, 0.1); /* Changed */
-        backdrop-filter: blur(4px); /* Added */
+        display: block; /* Shows the container */
+        background: rgba(255, 255, 255, 0.1); /* Sets the background color */
+        backdrop-filter: blur(4px); /* Applies a blur to the background */
+        -webkit-backdrop-filter: blur(4px); /* Applies a blur to the background for Safari and older browsers */
     }
 
+    /* Header styling */
     header {
-        flex-direction: column; /* Change direction of items */
+        flex-direction: column; /* Stacks flex items vertically */
     }
 
+    /* Content styling */
     .content {
-        top: 45%;
+        top: 49%; /* Adjusts the position from the top */
     }
 
+    /* Logo container styling */
     .logo {
-        justify-content: center; /* Center logo horizontally */
+        justify-content: center; /* Centers the logo horizontally */
+        padding-right: 0px; /* Removes the space to the right */
+        padding-top: 25px; /* Adds some space to the top */
     }
 
+    /* Logo styling */
     .logo img {
-        height: 180px; /* Increase logo size, adjust as needed */
+        height: 180px; /* Increases the logo size */
     }
 
+    /* Navigation container styling */
     nav {
-        position: fixed; /* Make navigation stick to the bottom */
-        bottom: 0; /* Stick to the bottom */
-        width: 100%; /* Full width */
-        justify-content: center; /* Center items */
+        position: fixed; /* Fixes the navigation to the viewport */
+        bottom: 0; /* Fixes the navigation to the bottom of the viewport */
+        padding-bottom: 100px; /* Adds some space to the bottom */
+        width: 100%; /* Makes the navigation full width */
+        justify-content: center; /* Centers the navigation items */
     }
 
+    /* Navigation links styling */
     nav ul li a {
-        font-size: 23px; /* Decrease font size, adjust as needed */
+        font-size: 23px; /* Decreases the link text size */
     }
 
+    /* Navigation list items styling */
     nav ul li {
-        margin-right: 10px; /* Decrease space between links, adjust as needed */
-        padding-bottom: 20px;
+        margin-right: 10px; /* Decreases the space between list items */
     }
-    
+
+    /* Last navigation list item styling */
     nav ul li:last-child {
-    padding-right: 0px; /* Change this value as needed */
+        padding-right: 0px; /* Removes the space to the right */
     }
-    
 }
