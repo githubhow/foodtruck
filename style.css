@@ -1,117 +1,175 @@
 /* Reset default styles */
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Removes default margins */
+    padding: 0; /* Removes default padding */
     box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
 }
 
-/* Body styling */
 body {
-    font-family: Arial, sans-serif; /* Sets the font for the body */
-    background-color: #34495E; /* Sets the background color */
-    color: #fff; /* Sets the text color */
+    overflow: hidden; /* Hides any content that's exceeding the body's size */
+    margin: 0; /* Removes default body margin */
+    padding: 0; /* Removes default body padding */
+}
+
+/* Styles for the background image */
+.background-image {
+    position: relative; /* Sets positioning context for absolute positioned child elements */
+    background-image: url('truckimg1.png'); /* Specifies the image */
+    background-size: cover; /* Scales the image as large as possible without stretching it */
+    background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Makes background fixed while the content can move */
+    height: 100vh; /* Makes the image take up the full viewport height */
+}
+
+/* Styles for the glassmorphism effect container */
+.glassmorphism {
+    display: none; /* Hides the container by default */
+    position: absolute; /* Positions the container relative to the nearest positioned ancestor */
+    top: 0; /* Positions the container at the top of the ancestor */
+    left: 0; /* Positions the container at the left of the ancestor */
+    width: 100%; /* Makes the container full width */
+    height: 100vh; /* Makes the container take up the full viewport height */
+    z-index: 0; /* Places the container behind other elements */
 }
 
 /* Header styling */
 header {
-    background-color: #34495E; /* Sets the background color */
-    position: fixed; /* Fixes the position of the header at the top of the page */
-    top: 0;
-    left: 0;
-    width: 100%; /* Sets the width to cover the entire page width */
-    z-index: 1000; /* Ensures the header is always on top */
-    height: 40px; /* Decrease the height of the header */
-    display: flex; /* Uses flexbox for alignment */
-    align-items: center; /* Centers items vertically */
-    justify-content: center; /* Centers items horizontally */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a slight shadow for a 3D effect */
+    display: flex; /* Enables flex context for child elements */
+    flex-direction: row-reverse; /* Reverses the natural order of flex items */
+    justify-content: space-between; /* Spaces flex items evenly apart */
+    background-color: transparent; /* Makes the background transparent */
+    height: 50px; /* Sets the height of the header */
+}
+
+/* Logo container styling */
+.logo {
+    display: flex; /* Enables flex context for child elements */
+    padding-right: 10%;/* Adds some space to the right */
+    align-items: center; /* Centers flex items vertically */
+    height: 90px; /* Sets the height of the logo container */
+    mix-blend-mode: multiply; /* Specifies the blend mode for the logo */
+}
+
+/* New logo link styling */
+.logo-link {
+    display: flex; /* Enables flex context for child elements */
+    height: 100%; /* Sets the height equal to its parent's height */
+}
+
+/* Logo styling */
+.logo img {
+    height: 100%; /* Sets the image height equal to its parent's height */
+}
+
+/* Navigation container styling */
+nav {
+    display: flex; /* Enables flex context for child elements */
+    align-items: center; /* Centers flex items vertically */
+    position: relative; /* Sets positioning context for absolute positioned child elements */
+    z-index: 1; /* Places the navigation in front of other elements */
 }
 
 /* Navigation list styling */
-header nav ul {
+nav ul {
+    display: flex; /* Places list items in a row */
     list-style-type: none; /* Removes bullet points */
-    display: flex; /* Use CSS flex */
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Create as many columns as needed to fit the buttons */
-    justify-items: center; /* Center items horizontally */
-    gap: 10px; /* Add some space between items */
-    align-items: center; /* Centers items vertically */
-    height: 100%; /* Sets the height to match the header */
-    width: 80%; /* Keep the same width */
+    padding: 0; /* Removes default padding */
 }
 
-/* Navigation list item styling */
-header nav ul li {
-    flex: 1; /* Allows items to grow and shrink as needed */
+/* First navigation list item styling */
+nav ul li:first-child {
+    padding-left: 20px; /* Adds some space to the left */
 }
 
-/* Navigation link styling */
-header nav ul li a {
-    display: inline-block; /* Allows for width and height to be set */
-    text-decoration: none; /* Removes underline */
-    color: #fff; /* Sets text color */
-    background-color: #3498DB; /* Sets background color */
-    padding: 5px 10px; /* Adds space around text */
-    border-radius: 5px; /* Rounds the corners */
-    transition: transform 0.3s ease-in-out; /* Animates any changes */
-    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
-    width: 100px; /* Sets a fixed width */
-    text-align: center; /* Centers text */
-    margin: 0 10px; /* Adds space between items */
+/* Navigation list items styling */
+nav ul li {
+    margin-right: 20px; /* Adds space between list items */
 }
 
-/* Navigation link hover styling */
-header nav ul li a:hover {
-    transform: scale(1.02); /* Slightly enlarges item */
+/* Navigation links styling */
+nav ul li a {
+    color: #ffffff; /* Sets the link color */
+    -webkit-text-stroke: 2px #050000; /* Applies a stroke to the link text */
+    font-weight: 800; /* Makes the link text bold */
+    font-size: 28px; /* Sets the link text size */
+    text-decoration: none; /* Removes the underline from the link text */
+    font-family: Arial, sans-serif; /* Sets the font family for the link text */
 }
 
-#hero {
-    background-color: #2C3E50;
-    padding: 60px 0 50px 0;
-    text-align: center;
-    min-height: 100vh; /* Updated value to cover the full viewport height */
-    position: relative;
+/* Content styling */
+.content {
+    position: absolute; /* Positions the content relative to the nearest positioned ancestor */
+    top: 58.5%; /* Positions the content from the top */
+    left: 50%; /* Positions the content from the left */
+    transform: translate(-50%, -50%); /* Centers the content */
+    text-align: center; /* Centers the text */
+    padding: 0 5%; /* Adds padding to the left and right */
 }
 
-/* Hero section heading styling */
-#hero h1 {
-    font-size: 2em; /* Sets the font size */
-    margin: 0; /* Removes default margin */
+/* Content link styling */
+.content a {
+    text-decoration: none; /* Removes the underline from the link text */
+    display: inline-block; /* Allows to add padding, margins, etc. */
+    color: #fff; /* Sets the link color */
+    font-weight: 800; /* Makes the link text bold */
+    font-size: 18px; /* Sets the link text size */
+    border: 2px solid #fff; /* Sets the border around the link */
+    padding: 14px 70px; /* Adds padding to the top/bottom and left/right */
+    border-radius: 50px; /* Makes the border corners rounded */
+    margin-top: 20px; /* Adds some space to the top */
+    background-color: rgba(0, 0, 0, 0.8); /* Sets the background color of the link */
 }
 
-/* Hero section paragraph styling */
-#hero p {
-    font-size: 1.2em; /* Sets the font size */
-}
-
-/* Hamburger icon styling */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
-    width: 2rem; /* Match the height of the navigation buttons */
-    height: 2rem; /* Match the height of the navigation buttons */
-    background: #3498DB; /* Sets the background color of the button */
-    border-radius: 5px; /* Less rounded corners for a more rectangular look */
-    cursor: pointer;
-    z-index: 10;
-    transition: background 0.3s ease; /* Adds a transition effect when the button state changes */
-    position: absolute; /* Position the hamburger menu to the right */
-    right: 15px; /* Margin from the right side of the header */
-    transform: translateY(-50%); /* Shift the hamburger icon up by half its height to center it vertically */
-    color: #fff; /* Sets the SVG stroke color */
-}
-
-.hamburger:hover {
-    background: #2980B9; /* Changes the background color when hovered */
-}
-
-@media screen and (max-width: 700px) {
-    #main-menu {
-        display: none; /* Hide the navigation links */
+/* Styles for screens with a max width of 600px */
+@media screen and (max-width: 600px) {
+    /* Background image styling */
+    .background-image {
+        background-image: url('mediatruck.jpg'); /* Changes the image for small screens */
     }
 
-    .hamburger {
-        display: flex; /* Show the hamburger menu */
+    /* Glassmorphism effect container styling */
+    .glassmorphism {
+        display: block; /* Shows the container */
+        background: rgba(255, 255, 255, 0.1); /* Sets the background color */
+        backdrop-filter: blur(4px); /* Applies a blur to the background */
+        -webkit-backdrop-filter: blur(4px); /* Applies a blur to the background for Safari and older browsers */
+    }
+
+    /* Header styling */
+    header {
+        flex-direction: column; /* Stacks flex items vertically */
+    }
+
+    /* Content styling */
+    .content {
+        top: 49%; /* Adjusts the position from the top */
+        z-index: 1; /* Keeps the order button to the front */
+    }
+
+    /* Logo container styling */
+    .logo {
+        justify-content: center; /* Centers the logo horizontally */
+        padding-right: 0px; /* Removes the space to the right */
+        padding-top: 30px; /* Adds some space to the top */
+    }
+
+    /* Logo styling */
+    .logo img {
+        height: 180px; /* Increases the logo size */
+    }
+
+    /* Navigation container styling */
+    nav {
+        position: fixed; /* Fixes the navigation to the viewport */
+        bottom: 0; /* Fixes the navigation to the bottom of the viewport */
+        padding-bottom: 100px; /* Adds some space to the bottom */
+        width: 100%; /* Makes the navigation full width */
+        justify-content: center; /* Centers the navigation items */
+    }
+
+    /* Last navigation list item styling */
+    nav ul li:last-child {
+        padding-right: 0px; /* Removes the space to the right */
     }
 }
