@@ -45,7 +45,7 @@ header {
 /* Logo container styling */
 .logo {
     display: flex; /* Enables flex context for child elements */
-    padding-right: 40px; /* Adds some space to the right */
+    padding-right: 10%;/* Adds some space to the right */
     align-items: center; /* Centers flex items vertically */
     height: 90px; /* Sets the height of the logo container */
     mix-blend-mode: multiply; /* Specifies the blend mode for the logo */
@@ -144,13 +144,14 @@ nav ul li a {
     /* Content styling */
     .content {
         top: 49%; /* Adjusts the position from the top */
+        z-index: 1; /* Keeps the order button to the front */
     }
 
     /* Logo container styling */
     .logo {
         justify-content: center; /* Centers the logo horizontally */
         padding-right: 0px; /* Removes the space to the right */
-        padding-top: 25px; /* Adds some space to the top */
+        padding-top: 30px; /* Adds some space to the top */
     }
 
     /* Logo styling */
@@ -165,16 +166,6 @@ nav ul li a {
         padding-bottom: 100px; /* Adds some space to the bottom */
         width: 100%; /* Makes the navigation full width */
         justify-content: center; /* Centers the navigation items */
-    }
-
-    /* Navigation links styling */
-    nav ul li a {
-        font-size: 23px; /* Decreases the link text size */
-    }
-
-    /* Navigation list items styling */
-    nav ul li {
-        margin-right: 10px; /* Decreases the space between list items */
     }
 
     /* Last navigation list item styling */
