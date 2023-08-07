@@ -125,7 +125,7 @@ nav ul li a {
 @media screen and (max-width: 600px) {
     /* Background image styling */
     .background-image {
-        background-image: url('mediatruck.jpg'); /* Changes the image for small screens */
+        background-image: url('location.png'); /* Changes the image for small screens */
     }
 
     /* Glassmorphism effect container styling */
@@ -156,7 +156,7 @@ nav ul li a {
 
     /* Logo styling */
     .logo img {
-        height: 180px; /* Increases the logo size */
+        height: 100px; /* Increases the logo size */
     }
 
     /* Navigation container styling */
