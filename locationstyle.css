@@ -128,14 +128,6 @@ nav ul li a {
         background-image: url('location.png'); /* Changes the image for small screens */
     }
 
-    /* Glassmorphism effect container styling */
-    .glassmorphism {
-        display: block; /* Shows the container */
-        background: rgba(255, 255, 255, 0.1); /* Sets the background color */
-        backdrop-filter: blur(4px); /* Applies a blur to the background */
-        -webkit-backdrop-filter: blur(4px); /* Applies a blur to the background for Safari and older browsers */
-    }
-
     /* Header styling */
     header {
         flex-direction: column; /* Stacks flex items vertically */
