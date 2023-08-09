@@ -100,7 +100,7 @@ nav ul li a {
 /* Content styling */
 .content {
     position: absolute; /* Positions the content relative to the nearest positioned ancestor */
-    top: 58.5%; /* Positions the content from the top */
+    top: 55.45%; /* Positions the content from the top */
     left: 50%; /* Positions the content from the left */
     transform: translate(-50%, -50%); /* Centers the content */
     text-align: center; /* Centers the text */
@@ -117,8 +117,17 @@ nav ul li a {
     border: 2px solid #fff; /* Sets the border around the link */
     padding: 14px 70px; /* Adds padding to the top/bottom and left/right */
     border-radius: 50px; /* Makes the border corners rounded */
-    margin-top: 20px; /* Adds some space to the top */
+    margin-top: 0px; /* Removes space to the top */
     background-color: rgba(0, 0, 0, 0.8); /* Sets the background color of the link */
+}
+
+.content h1 {
+    color: #ffffff; /* Sets the link color */
+    -webkit-text-stroke: 2px #050000; /* Applies a stroke to the link text */
+    font-weight: 800; /* Makes the link text bold */
+    font-size: 28px; /* Sets the link text size */
+    text-decoration: none; /* Removes the underline from the link text */
+    font-family: Arial, sans-serif; /* Sets the font family for the link text */
 }
 
 /* Styles for screens with a max width of 600px */
@@ -135,8 +144,12 @@ nav ul li a {
 
     /* Content styling */
     .content {
-        top: 49%; /* Adjusts the position from the top */
+        top: 40.95%; /* Adjusts the position from the top */
         z-index: 1; /* Keeps the order button to the front */
+    }
+
+    .content h1 {
+        font-size: 25px; /* Sets the link text size */
     }
 
     /* Logo container styling */
