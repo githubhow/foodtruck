@@ -144,7 +144,7 @@ nav ul li a {
 
     /* Content styling */
     .content {
-        top: 40.95%; /* Adjusts the position from the top */
+        top: 50%; /* Adjusts the position from the top */
         z-index: 1; /* Keeps the order button to the front */
     }
 
