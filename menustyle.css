@@ -143,8 +143,13 @@ nav ul li a {
 
     /* Content styling */
     .content {
-        top: 49%; /* Adjusts the position from the top */
+        top: 78%; /* Adjusts the position from the top */
         z-index: 1; /* Keeps the order button to the front */
+    }
+
+    .content a {
+        padding: 4px 20px; /* Adds padding to the top/bottom and left/right */
+        margin-top: 0px; /* Adds some space to the top */
     }
 
     /* Logo container styling */
