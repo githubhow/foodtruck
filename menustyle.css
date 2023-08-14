@@ -100,7 +100,7 @@ nav ul li a {
 /* Content styling */
 .content {
     position: absolute; /* Positions the content relative to the nearest positioned ancestor */
-    top: 59.5%; /* Positions the content from the top */
+    top: 9.5%; /* Positions the content from the top */
     left: 50%; /* Positions the content from the left */
     transform: translate(-50%, -50%); /* Centers the content */
     text-align: center; /* Centers the text */
